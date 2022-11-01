@@ -2,7 +2,16 @@ self.addEventListener("install", e => {
     console.log("Caching resources..");
     e.waitUntil(
         caches.open("static").then(cache => {
-            return cache.addAll(["./", "./src/master.css", "./src/images/logo192.png", "./src/images/logo512.png" ]);
+            return cache.addAll([
+            "./", 
+            "./index.html",
+            "./sw.js",
+            "./src/manifest.json",
+            "./src/master.css", 
+            "./src/script.js",
+            "./src/images/logo192.png", 
+            "./src/images/logo512.png" 
+        ]);
         })
     );
     console.log("Resources in cache. Done");
