@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
     console.log("Service Worker supported");
-    navigator.serviceWorker.register("Public/sw.js").then(ServiceWorkerRegistration => {
+    navigator.serviceWorker.register("./public/sw.js").then(ServiceWorkerRegistration => {
         console.log("SW Registered");
         console.log(ServiceWorkerRegistration);
     }).catch(error => {
